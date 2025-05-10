@@ -1,0 +1,153 @@
+/* ============ RESET E ESTILOS GLOBAIS ============ */
+/* Remove margens e paddings padrão e define box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Pacifico', 'Dancing Script', cursive; /* Define fontes prioritárias */
+    background-color: #ffebf3; /* Cor de fundo rosa claro */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima da viewport */
+    padding: 20px; /* Espaçamento interno */
+    background-image: radial-gradient(circle, #ffcce6 0%, #ffebf3 70%); /* Gradiente radial suave */
+}
+
+/* ============ CONTAINER PRINCIPAL ============ */
+.container {
+    width: 90%; /* Largura relativa */
+    max-width: 650px; /* Largura máxima */
+    text-align: center; /* Alinhamento centralizado */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3); /* Sombra rosa */
+    border: 3px solid #ff66b3; /* Borda rosa */
+}
+
+/* ============ ESTILOS DO TÍTULO ============ */
+h1 {
+    color: #ff1493; /* Rosa forte */
+    font-size: 3.5rem; /* Tamanho grande */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* ============ ESTILOS DA IMAGEM ============ */
+.imagem-mae {
+    width: 100%; /* Largura total do container */
+    max-height: 400px; /* Altura máxima */
+    object-fit: contain; /* Mantém proporções sem cortar */
+    border-radius: 15px; /* Bordas arredondadas */
+    margin: 25px 0; /* Espaçamento vertical */
+    border: 5px solid white; /* Borda branca */
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3); /* Sombra rosa */
+}
+
+/* ============ ESTILOS DO TEXTO DE INSTRUÇÃO ============ */
+.instrucao {
+    font-size: 1.8rem; /* Tamanho grande */
+    color: #ff1493; /* Rosa forte */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* ============ ESTILOS DO BOTÃO ============ */
+.botao {
+    background-color: #ff1493; /* Rosa forte */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    padding: 20px 40px; /* Espaçamento interno grande */
+    font-size: 1.8rem; /* Texto grande */
+    border-radius: 30px; /* Bordas completamente arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-family: 'Pacifico', cursive; /* Fonte especial */
+    margin: 25px 0; /* Espaçamento vertical */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4); /* Sombra rosa */
+}
+
+/* Efeito hover do botão */
+.botao:hover {
+    background-color: #d8117e; /* Rosa mais escuro */
+    transform: scale(1.05); /* Aumenta ligeiramente */
+}
+
+/* ============ ESTILOS DA MENSAGEM ============ */
+.mensagem {
+    font-size: 2rem; /* Texto grande */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    margin: 30px 0; /* Espaçamento vertical */
+    padding: 25px; /* Espaçamento interno */
+    background-color: #fff5f9; /* Fundo rosa muito claro */
+    border-radius: 15px; /* Bordas arredondadas */
+    display: none; /* Inicialmente oculto */
+    color: #8b008b; /* Roxo escuro */
+    border: 2px dashed #ff1493; /* Borda tracejada rosa */
+}
+
+/* ============ ESTILOS DA ASSINATURA DESTACADA ============ */
+.assinatura-destaque {
+    display: inline-block; /* Permite transformações */
+    font-family: 'Dancing Script', cursive; /* Fonte especial */
+    font-size: 2.5rem; /* Texto extra grande */
+    color: #ff0000; /* Vermelho intenso */
+    background-color: #fff0f0; /* Fundo vermelho muito claro */
+    padding: 15px 30px; /* Espaçamento interno */
+    margin: 40px 0 20px; /* Espaçamento vertical */
+    border-radius: 12px; /* Bordas arredondadas */
+    border-left: 6px solid #cc0000; /* Borda lateral vermelha escura */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2); /* Sombra vermelha */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+    transform: rotate(-1deg); /* Leve inclinação */
+    transition: all 0.3s ease; /* Transição suave */
+    animation: pulsar 1.5s infinite ease-in-out; /* Animação de pulsação */
+}
+
+/* Animação de pulsação para a assinatura */
+@keyframes pulsar {
+    0% { transform: rotate(-1deg) scale(1); color: #ff0000; } /* Estado inicial */
+    50% { transform: rotate(-1deg) scale(1.05); color: #cc0000; } /* Meio da animação */
+    100% { transform: rotate(-1deg) scale(1); color: #ff0000; } /* Volta ao início */
+}
+
+/* Efeito hover para a assinatura */
+.assinatura-destaque:hover {
+    background-color: #ffe6e6; /* Fundo levemente mais escuro */
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+/* ============ ESTILOS RESPONSIVOS (MOBILE) ============ */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px; /* Reduz espaçamento interno */
+    }
+    
+    h1 {
+        font-size: 2.8rem; /* Reduz tamanho do título */
+    }
+    
+    .instrucao {
+        font-size: 1.5rem; /* Reduz tamanho do texto */
+    }
+    
+    .botao {
+        font-size: 1.5rem; /* Reduz tamanho do botão */
+        padding: 15px 30px; /* Reduz espaçamento interno */
+    }
+    
+    .mensagem {
+        font-size: 1.7rem; /* Reduz tamanho da mensagem */
+    }
+    
+    .assinatura-destaque {
+        font-size: 2rem; /* Reduz tamanho da assinatura */
+        padding: 12px 20px; /* Reduz espaçamento interno */
+        margin: 30px 0 15px; /* Ajusta espaçamento */
+    }
+}
